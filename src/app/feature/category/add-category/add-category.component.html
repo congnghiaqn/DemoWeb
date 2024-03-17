@@ -1,0 +1,41 @@
+<div class="container">
+  <h1 class="mt-3">Add Category</h1>
+  <form [formGroup]="addCategory">
+    <div class="mt-2">
+      <div class="mt-3">
+        <label for="Name" class="form-label">Category Name</label>
+        <input
+          class="form-control"
+          formControlName="Name"
+          type="text"
+          name="Name"
+          id="Name"
+          [ngClass]="{ 'is-invalid': submitted && f['Name'].errors }"
+        />
+        @if (f['Name'].errors && f['Name'].errors['required'] && submitted) {
+          <span class="add-category-required"> Category Name is required. </span>
+        }
+      </div>
+      <div class="mt-3">
+        <label for="UrlHandle" class="form-label">Category Url Handle</label>
+        <input
+          class="form-control"
+          formControlName="UrlHandle"
+          type="text"
+          name="UrlHandle"
+          id="UrlHandle"
+          [ngClass]="{ 'is-invalid': submitted && f['UrlHandle'].errors }"
+        />
+        @if (f['UrlHandle'].errors && f['UrlHandle'].errors['required'] &&
+        submitted) {
+          <span class="add-category-required"> Url Handle is required. </span>
+        }
+      </div>
+      <div class="mt-3">
+        <button type="button" (click)="create()" class="btn btn-primary">
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
