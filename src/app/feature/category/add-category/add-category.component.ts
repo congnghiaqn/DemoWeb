@@ -7,14 +7,18 @@ import {
   Validators,
 } from '@angular/forms';
 import { CategoryService } from '../services/category.service';
-import { HttpClientModule } from '@angular/common/http';
+import {} from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-category',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, HttpClientModule],
+  imports: [CommonModule, ReactiveFormsModule, 
+// TODO: `HttpClientModule` should not be imported into a component directly.
+// Please refactor the code to add `provideHttpClient()` call to the provider list in the
+// application bootstrap logic and remove the `HttpClientModule` import from this component.
+HttpClientModule],
   templateUrl: './add-category.component.html',
   styleUrl: './add-category.component.css',
 })
