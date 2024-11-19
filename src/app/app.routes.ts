@@ -4,16 +4,16 @@ import { AddCategoryComponent } from './feature/category/add-category/add-catego
 import { EditCategoryComponent } from './feature/category/edit-category/edit-category.component';
 
 export const routes: Routes = [
-    {
-        path: 'admin/categories',
-        component: CategoryListComponent,
-    },
-    {
-        path: 'admin/categories/edit/:id',
-        component: EditCategoryComponent,
-    },
-    {
-        path: 'admin/categories/add',
-        component: AddCategoryComponent,
-    }
+  {
+    path: 'admin/categories',
+    component: CategoryListComponent,
+  },
+  {
+    path: 'admin/categories/edit/:id',
+    component: EditCategoryComponent,
+  },
+  {
+    path: 'admin/categories/add',
+    component: AddCategoryComponent,
+  },
 ];

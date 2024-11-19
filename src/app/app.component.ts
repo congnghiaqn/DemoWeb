@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./core/components/navbar/navbar.component";
 import { CommonModule } from '@angular/common';
 
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, NavbarComponent, RouterLink, CommonModule, RouterModule]
+    imports: [RouterOutlet, NavbarComponent, CommonModule, RouterModule]
 })
 export class AppComponent {
   title = 'DemoWeb';
